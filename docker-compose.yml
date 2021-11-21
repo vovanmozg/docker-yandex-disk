@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  yandex-disk:
+    volumes:
+      - /media/sda/yandex_disk_docker/user/data:/root/Yandex.Disk
+      - /media/sda/yandex_disk_docker/user/config:/root/.config/yandex-disk
+    image: vovan/yandex-disk
+    build: 
+      context: ./image
+      network: host
+
